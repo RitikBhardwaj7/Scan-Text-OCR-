@@ -12,26 +12,61 @@
         android:id="@+id/imgCamera"
         android:layout_width="400dp"
         android:layout_height="400dp"
+        android:background="#979696"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12"
-        android:background="#fff"
-        />
+        app:layout_constraintVertical_bias="0.12" />
 
     <Button
-        android:id="@+id/btnCamera"
-        android:layout_width="304dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="68dp"
-        android:text="Scan"
+        android:id="@+id/capture"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:background="@drawable/group"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.835" />
+
+    <Button
+        android:id="@+id/flash"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="108dp"
+        android:background="@drawable/flash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.368"
+        app:layout_constraintStart_toEndOf="@+id/capture" />
+
+    <Button
+        android:id="@+id/gallery"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="108dp"
+        android:background="@drawable/gallery"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/capture"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click to Scan"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/capture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCamera"
+        app:layout_constraintVertical_bias="0.492" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

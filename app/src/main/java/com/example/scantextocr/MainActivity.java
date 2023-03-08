@@ -2,6 +2,8 @@ package com.example.scantextocr;
 
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.view.Window;
 import android.widget.Button;
 import android.graphics.Bitmap;
 import android.provider.MediaStore;
@@ -17,21 +19,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);//will hide the title
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
         ImageView imgCamera = findViewById(R.id.imgCamera);
-        Button btnCamera = findViewById(R.id.btnCamera);
+        Button capture = findViewById(R.id.capture);
 
-        btnCamera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               Intent iCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(iCamera, CAMERA_REQ_CODE );
-            }
-
-        });
 
 
         }
     }
-}
